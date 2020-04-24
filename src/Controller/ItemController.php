@@ -29,9 +29,13 @@ class ItemController extends AbstractController
      */
     public function index()
     {
+        // ---- Modèle ----
         $itemManager = new ItemManager();
         $items = $itemManager->selectAll();
 
+        // ---- Parfois le contrôleur a un peu plus de travail !!!
+
+        // ---- Vue ----
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
 

@@ -1,0 +1,8 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Post {{ post.title }}</h1>
+    <p>{{ post.id }}. {{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <a href="/post/index">Back to blog index</a>
+{% endblock %}

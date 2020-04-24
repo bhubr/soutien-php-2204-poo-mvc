@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Write a new post</h1>
+    {% if error %}
+        {{ error }}
+    {% endif %}
+    {% include 'Post/_form.html.twig' %}
+{% endblock %}

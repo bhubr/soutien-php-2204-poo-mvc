@@ -21,6 +21,13 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $names = [
+            'Joe', 'Jack', 'William', 'Averell'
+        ];
+        $nameIndex = rand(0, 3);
+        $name = $names[$nameIndex];
+        return $this->twig->render('Home/index.html.twig', [
+            'name' => $name
+        ]);
     }
 }
